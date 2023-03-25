@@ -18,12 +18,12 @@ function Pizza() {
                         return (
                             //CARD
                             <Card className='text-center justify-content-center p-2 bg-dark text-light shadow' key={pizza.id} >
-                                <Card.Img variant="top" src={pizza.img} />
+                                <Card.Img variant="top" src={pizza.imagen} />
                                 <Card.Body>
-                                    <Card.Title>{pizza.name.toUpperCase()}</Card.Title>
+                                    <Card.Title>{pizza.nombre.toUpperCase()}</Card.Title>
                                     <Card.Text>{pizza.descripcion}</Card.Text>
                                     <ListGroup variant='flush'>
-                                        {pizza.ingredients.map((ingredient, i) => (
+                                        {pizza.descripcion.map((ingredient, i) => (
                                             <ListGroup.Item className='rounded text-capitalize bg-danger text-light m-1' key={i}>
                                                 {ingredient}
                                             </ListGroup.Item>

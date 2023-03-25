@@ -11,9 +11,9 @@ const Home = () => {
 
   return (
     <div>
-      <header style={{ backgroundImage: `url("https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_4:3/k%2FPhoto%2FRecipe%20Ramp%20Up%2F2021-07-Chicken-Alfredo-Pizza%2FChicken-Alfredo-Pizza-KitchnKitchn2970-1_01")`, textAlign: 'center' }}>
-        <h1 style={{color: 'white'}}>LA TIENDA AMOROSAAAAA :DD!</h1>
-        <h5 style={{color: 'white'}}>Productos hechos con Amoo'' :P!!</h5>
+      <header style={{ backgroundImage: `url("../../assets/img/headerimage.jpg")`, textAlign: 'center' }}>
+        <h1 style={{color: 'black'}}>Artículos Electrónicos :D!</h1>
+        <h5 style={{color: 'black'}}>Productos importados desde USA</h5>
       </header>
       <Row>
         {productos.map((producto, i) => {
@@ -23,18 +23,18 @@ const Home = () => {
                 className="text-center m-2 bg-dark text-light p-2 rounded shadow"
                 key={producto.id}
               >
-                <Card.Img variant="top" src={producto.img} />
+                <Card.Img variant="top" src={producto.imagen} />
                 <Card.Body>
-                  <Card.Title>{producto.name.toUpperCase()}</Card.Title>
+                  <Card.Title>{producto.nombre.toUpperCase()}</Card.Title>
                   { <ListGroup variant='flush' key={i}>
-                                                {producto.ingredients.map((ingredient, i) => (
+                                                {producto.descripcion.map((ingredient, i) => (
                                                     <ListGroup.Item className='rounded text-capitalize bg-danger text-light m-1' key={i} >
                                                         {ingredient}
                                                     </ListGroup.Item>
                                                 ))}
                                                 <Card.Title className='p-2 text-success'>Precio: ${producto.precio}</Card.Title>
                                             </ListGroup>}
-                  <Card.Text>{producto.descripcion.toUpperCase()}</Card.Text>
+                  <Card.Text>{producto.categoria.toUpperCase()}</Card.Text>
                   <Button
                     className="mx-3"
                     variant="outline-light"
